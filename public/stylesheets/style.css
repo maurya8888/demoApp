@@ -1,0 +1,35 @@
+.act a{
+	color: #000;
+}
+
+.bgc-f1{
+	background-color: #f1f1f1;
+}
+
+.padding-5 {
+	padding: 5px;
+}
+
+.margin-0 {
+	margin: 0;
+}
+
+.border-e7 {
+	border: 1px solid #e7e7e7;
+}
+
+.border-top-e7 {
+	border-top: 1px solid #e7e7e7;
+}
+
+.margin-top-10 {
+	margin-top: 10px;
+}
+
+.margin-top-20 {
+	margin-top: 20px;
+}
+
+.width-100 {
+	width: 100%;
+}

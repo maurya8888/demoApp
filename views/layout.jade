@@ -1,0 +1,46 @@
+doctype html
+html(ng-app="ijp")
+	head
+		title= title
+		link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/theme.min.css')
+
+		script(src="/jquery/dist/jquery.min.js")
+		script(src="/bootstrap/dist/js/bootstrap.min.js")
+		script(src="/angular/angular.min.js")
+		script(src="/angular-resource/angular-resource.min.js")
+		script(src="/javascripts/scripts.js")
+
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	body
+		section.container-fluid.bgc-f1
+			section.container
+				.row
+					section(class="col-xs-2 col-md-2 col-lg-1 col-sm-2")
+						img(src="images/logo.png")
+					section(class="col-md-3 hidden-xs") Product Name
+					section(class="col-xs-3 col-xs-offset-5 visible-xs")
+						select
+							option Executive Profile
+							option Priorities
+							option Service Preferences
+							option Service Plan
+		section.container
+			.row.hidden-xs
+				section(class="col-md-12")
+					ul.nav.navbar-nav.navbar-right
+						li.act(role='presentation')
+							a(href='#') Executive Profile
+						li(role='presentation')
+							a(href='#') Priorities
+						li(role='presentation')
+							a(href='#') Service Preferences
+						li(role='presentation')
+							a(href='#') Service Plan
+		hr.hidden-xs.underline
+		block content

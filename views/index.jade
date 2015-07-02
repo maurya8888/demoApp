@@ -1,0 +1,74 @@
+extends layout
+
+block content
+	.container
+		.row.margin-top-20
+			section(class="col-xs-12")
+				h1 Welcome #{title}
+		.row.margin-top-20
+			section(class="col-xs-12 col-md-6 col-sm-6")
+				.row.margin-0.bgc-f1.border-e7
+					section.col-xs-6.col-md-12 
+						div
+							p.text-muted.col-md-6 Executive:
+							p.col-md-6
+								strong John Barber
+						div
+							p.text-muted.col-md-6 Title:
+							p.col-md-6
+								strong Head of Marketing
+					section(class="col-xs-6 col-md-12") 
+						div
+							p.text-muted.col-md-6 Organization:
+							p.col-md-6
+								strong PepsiCo, Inc.
+						div
+							p.text-muted.col-md-6 Membership Program:
+							p.col-md-6
+								strong XD Marketing Leadership Council
+				.row.margin-top-20
+					section(class="col-xs-12")
+						p Welcome to XD's network of leading executives at the world's best companies.
+						p We have a vast array of resources - from research and insights to proven best practices to advisory support - focused on advancing the science and practice of business management.
+						p All are readily available to you through membership, focused on helping you and your team achieve success.
+						p Our best members fully tap into these resources. Today, ourfocus is on enabling you to do the same. Specifically, we will begin the process of mapping our resources to:
+						ul
+							li Your specific executive profile
+							li Your relevant business priorities
+							li Your service preferences
+						p The information we discuss today will only be used within XD, solely to maximize the value of your membership. The output of our conversation will be our recommended membership service plan.
+			section.margin-top-20(class="col-xs-12 col-md-6 col-sm-6" ng-controller="carouselCtrl")
+				#carousel-example-generic.carousel.slide(data-ride='carousel')
+					// Indicators
+					ol.carousel-indicators
+						li.active(data-target='#carousel-example-generic', data-slide-to='0')
+						li(data-target='#carousel-example-generic', data-slide-to='1')
+						li(data-target='#carousel-example-generic', data-slide-to='2')
+					// Wrapper for slides
+					.carousel-inner(role='listbox')
+						.item(ng-repeat="i in carouseldata" ng-class="{active: $index === 0}")
+							img.width-100(ng-src='{{i.image}}', alt='image1')
+							.carousel-caption
+								| {{i.text}}
+	.container-fluid
+		.row.margin-top-10.bgc-f1
+			section(class="col-xs-6 col-md-3 col-md-push-3 border-top-e7")
+				.row
+					.col-xs-6.col-xs-push-6.text-right
+						.btn.btn-primary.btn-sm 
+							<span class="glyphicon glyphicon-arrow-left"></span> PREVIOUS
+			section(class="col-xs-6 col-md-3 col-md-push-3 border-top-e7")
+				.row
+					.col-xs-6
+						.btn.btn-primary.btn-sm NEXT 
+							.glyphicon.glyphicon-arrow-right
+			section(class="col-xs-6 col-md-3 col-md-pull-6 border-top-e7")
+				.row
+					.col-xs-6.col-xs-push-6.text-right
+						.btn.btn-primary.btn-sm 
+							<span class="glyphicon glyphicon-th-list"></span> NOTES
+			section(class="col-xs-6 col-md-3 border-top-e7")
+				.row
+					.col-xs-6
+						.btn.btn-warning.btn-sm
+							<span class="glyphicon glyphicon-file"></span> SAVE
